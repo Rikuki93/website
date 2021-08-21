@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+  web:
+    image: webdevops/php-apache:7.4-alpine
+    restart: always
+    depends_on:
+      - db
+    volumes:
+      - ./web:/app
+    ports:
+      - 80:80
+  db:
+    image: mariadb:10.5
+    restart: always
+    volumes:
+      - ./moodle/database:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=cesf
+      - MYSQL_DATABASE=moodledb
+      - MYSQL_USER=moodleuser
+      - MYSQL_PASSWORD=passwd
