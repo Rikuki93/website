@@ -16,6 +16,6 @@ services:
       - ./moodle/database:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=cesf
-      - MYSQL_DATABASE=moodledb
-      - MYSQL_USER=moodleuser
+      - MYSQL_DATABASE=favoritos
+      - MYSQL_USER=reaper
       - MYSQL_PASSWORD=passwd

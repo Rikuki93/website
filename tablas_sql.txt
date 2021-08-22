@@ -1,0 +1,1 @@
+create table anime (nombre varchar(50), genero varchar(200), tipo varchar(10), estreno varchar(15), descripcion varchar(100), puntuacion varchar(2), estado (10), imagen blob);
